@@ -1,0 +1,822 @@
+{
+  "theme": {
+    "name": "DartTheme",
+    "styles": [
+      "turquoise",
+      "default",
+      "purple",
+      "blue",
+      "green",
+      "orange",
+      "red",
+      "pink"
+    ],
+    "version": "2.4"
+  },
+  "portalUrl": "https://kathycranston.maps.arcgis.com",
+  "appId": "",
+  "authorizedCrossOriginDomains": [],
+  "title": "Sweet Treat Shops In London, England",
+  "subtitle": "Find the nearest Sweet Treat Shop and Directions to your desired location",
+  "keepAppState": true,
+  "logo": "images/app-logo.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "widgetOnScreen": {
+    "widgets": [
+      {
+        "uri": "themes/DartTheme/widgets/DartController/Widget",
+        "position": {
+          "left": 0,
+          "right": 0,
+          "bottom": 20,
+          "relativeTo": "map"
+        },
+        "version": "2.4",
+        "id": "themes_DartTheme_widgets_DartController_Widget_19",
+        "name": "DartController"
+      },
+      {
+        "uri": "widgets/OverviewMap/Widget",
+        "visible": false,
+        "position": {
+          "right": 0,
+          "top": 0,
+          "relativeTo": "map"
+        },
+        "version": "2.4",
+        "id": "widgets_OverviewMap_Widget_20",
+        "name": "OverviewMap"
+      },
+      {
+        "uri": "widgets/Scalebar/Widget",
+        "visible": false,
+        "position": {
+          "left": 10,
+          "bottom": 1,
+          "zIndex": 100,
+          "relativeTo": "map"
+        },
+        "version": "2.4",
+        "id": "widgets_Scalebar_Widget_21",
+        "name": "Scalebar"
+      },
+      {
+        "uri": "widgets/Coordinate/Widget",
+        "visible": false,
+        "position": {
+          "right": 10,
+          "bottom": -2,
+          "zIndex": 100,
+          "relativeTo": "map"
+        },
+        "version": "2.4",
+        "id": "widgets_Coordinate_Widget_22",
+        "name": "Coordinate"
+      },
+      {
+        "uri": "widgets/AttributeTable/Widget",
+        "visible": false,
+        "version": "2.4",
+        "position": {
+          "relativeTo": "browser"
+        },
+        "id": "widgets_AttributeTable_Widget_23",
+        "name": "AttributeTable"
+      },
+      {
+        "uri": "widgets/Splash/Widget",
+        "visible": false,
+        "position": {
+          "relativeTo": "browser"
+        },
+        "version": "2.4",
+        "id": "widgets_Splash_Widget_24",
+        "name": "Splash"
+      }
+    ],
+    "panel": {
+      "uri": "jimu/OnScreenWidgetPanel",
+      "position": {
+        "relativeTo": "map"
+      }
+    }
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "itemId": "f66a8db82b8842e6bdfd84e491ec7233",
+    "mapOptions": {
+      "extent": {
+        "xmin": -17421.35898556862,
+        "ymin": 6708240.646943345,
+        "xmax": -8248.915591359833,
+        "ymax": 6714928.886918289,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "https://kathycranston.maps.arcgis.com"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/DartTheme/panels/DartPanel/Panel",
+      "position": {
+        "relativeTo": "map"
+      }
+    },
+    "widgets": [
+      {
+        "uri": "widgets/Legend/Widget",
+        "version": "2.4",
+        "id": "widgets_Legend_Widget_17",
+        "name": "Legend",
+        "index": 2
+      },
+      {
+        "uri": "widgets/LayerList/Widget",
+        "version": "2.4",
+        "id": "widgets_LayerList_Widget_18",
+        "name": "LayerList",
+        "index": 3
+      },
+      {
+        "uri": "widgets/ZoomSlider/Widget",
+        "isPreconfiguredInTheme": true,
+        "id": "widgets_ZoomSlider_Widget_25",
+        "name": "ZoomSlider",
+        "version": "2.4",
+        "position": {
+          "relativeTo": "map"
+        },
+        "index": 4
+      },
+      {
+        "name": "NearMe",
+        "label": "Find a Sweet Treat Shop near your desired location",
+        "version": "2.4",
+        "IsController": false,
+        "uri": "widgets/NearMe/Widget",
+        "config": {
+          "fontColor": "#000000",
+          "searchLayers": [
+            {
+              "url": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_bakery/FeatureServer/0",
+              "geometryType": "esriGeometryPoint",
+              "id": "shop_bakery_946",
+              "layerId": "0",
+              "baseURL": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_bakery/FeatureServer/",
+              "isMapServer": false,
+              "title": "Bakeries",
+              "popupInfo": {
+                "title": "shop_bakery_0",
+                "fieldInfos": [
+                  {
+                    "fieldName": "F_id",
+                    "label": "@id",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_city",
+                    "label": "addr:city",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_housenumber",
+                    "label": "addr:housenumber",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_street",
+                    "label": "addr:street",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "name",
+                    "label": "name",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "shop",
+                    "label": "shop",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_postcode",
+                    "label": "addr:postcode",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "phone",
+                    "label": "phone",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "website",
+                    "label": "website",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "ObjectId",
+                    "label": "",
+                    "isEditable": false,
+                    "tooltip": "",
+                    "visible": false,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  }
+                ],
+                "description": null,
+                "showAttachments": true,
+                "mediaInfos": []
+              },
+              "renderer": {
+                "type": "uniqueValue",
+                "field1": "shop",
+                "uniqueValueInfos": [
+                  {
+                    "value": "bakery",
+                    "symbol": {
+                      "type": "picturemarkersymbol",
+                      "url": "https://s-media-cache-ak0.pinimg.com/originals/0f/29/47/0f2947b20c21e8c3aa77db9706483a5b.jpg",
+                      "width": 17,
+                      "height": 20.81555555555555,
+                      "size": 16,
+                      "xoffset": 0,
+                      "yoffset": 0,
+                      "_inherited": {
+                        "p": 2
+                      }
+                    },
+                    "label": "Bakery"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_confectionary/FeatureServer/0",
+              "geometryType": "esriGeometryPoint",
+              "id": "shop_confectionary_1235",
+              "layerId": "0",
+              "baseURL": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_confectionary/FeatureServer/",
+              "isMapServer": false,
+              "title": "Confectionery Shops",
+              "popupInfo": {
+                "title": "shop_confectionary_0",
+                "fieldInfos": [
+                  {
+                    "fieldName": "F_id",
+                    "label": "@id",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "name",
+                    "label": "name",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "shop",
+                    "label": "shop",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_housenumber",
+                    "label": "addr:housenumber",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_street",
+                    "label": "addr:street",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "phone",
+                    "label": "phone",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "website",
+                    "label": "website",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_city",
+                    "label": "addr:city",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_postcode",
+                    "label": "addr:postcode",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "contact_website",
+                    "label": "contact:website",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "ObjectId",
+                    "label": "",
+                    "isEditable": false,
+                    "tooltip": "",
+                    "visible": false,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  }
+                ],
+                "description": null,
+                "showAttachments": true,
+                "mediaInfos": []
+              }
+            },
+            {
+              "url": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_chocolate/FeatureServer/0",
+              "geometryType": "esriGeometryPoint",
+              "id": "shop_chocolate_77",
+              "layerId": "0",
+              "baseURL": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_chocolate/FeatureServer/",
+              "isMapServer": false,
+              "title": "Chocolate Shops",
+              "popupInfo": {
+                "title": "shop_chocolate_0",
+                "fieldInfos": [
+                  {
+                    "fieldName": "F_id",
+                    "label": "@id",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_housenumber",
+                    "label": "addr:housenumber",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_street",
+                    "label": "addr:street",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "name",
+                    "label": "name",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "shop",
+                    "label": "shop",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "postal_code",
+                    "label": "postal_code",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "uri",
+                    "label": "uri",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_city",
+                    "label": "addr:city",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_housename",
+                    "label": "addr:housename",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "ObjectId",
+                    "label": "",
+                    "isEditable": false,
+                    "tooltip": "",
+                    "visible": false,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  }
+                ],
+                "description": null,
+                "showAttachments": true,
+                "mediaInfos": []
+              }
+            },
+            {
+              "url": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_pastry/FeatureServer/0",
+              "geometryType": "esriGeometryPoint",
+              "id": "shop_pastry_350",
+              "layerId": "0",
+              "baseURL": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_pastry/FeatureServer/",
+              "isMapServer": false,
+              "title": "Pastry Shops",
+              "popupInfo": {
+                "title": "shop_pastry_0",
+                "fieldInfos": [
+                  {
+                    "fieldName": "F_id",
+                    "label": "@id",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_city",
+                    "label": "addr:city",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_housenumber",
+                    "label": "addr:housenumber",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_street",
+                    "label": "addr:street",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "cuisine",
+                    "label": "cuisine",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "name",
+                    "label": "name",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "shop",
+                    "label": "shop",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "addr_postcode",
+                    "label": "addr:postcode",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "website",
+                    "label": "website",
+                    "isEditable": true,
+                    "tooltip": "",
+                    "visible": true,
+                    "format": null,
+                    "stringFieldOption": "textbox"
+                  },
+                  {
+                    "fieldName": "ObjectId",
+                    "label": "",
+                    "isEditable": false,
+                    "tooltip": "",
+                    "visible": false,
+                    "format": {
+                      "places": 0,
+                      "digitSeparator": true
+                    },
+                    "stringFieldOption": "textbox"
+                  }
+                ],
+                "description": null,
+                "showAttachments": true,
+                "mediaInfos": []
+              }
+            }
+          ],
+          "bufferInfo": {
+            "isVisible": true
+          },
+          "defaultBufferDistance": 3,
+          "maxBufferDistance": 8,
+          "bufferDistanceUnit": {
+            "bufferUnit": "UNIT_KILOMETER",
+            "routeUnit": "KILOMETERS",
+            "distanceUnit": "kilometers",
+            "label": "Kilometers",
+            "acronym": "km",
+            "value": "kilometers"
+          },
+          "zoomToFeature": false,
+          "intersectSearchedLocation": false,
+          "routeService": "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World",
+          "directionLengthUnit": {
+            "bufferUnit": "UNIT_STATUTE_MILE",
+            "routeUnit": "MILES",
+            "distanceUnit": "miles",
+            "label": "Miles",
+            "acronym": "mi",
+            "value": "miles"
+          },
+          "selectedSearchLayerOnly": true,
+          "isGeodesic": false,
+          "showLocationTool": false,
+          "symbols": {
+            "routeSymbol": {
+              "color": [
+                21,
+                99,
+                184,
+                255
+              ],
+              "width": 3.75,
+              "type": "esriSLS",
+              "style": "esriSLSSolid"
+            },
+            "graphicLocationSymbol": {
+              "angle": 0,
+              "xoffset": 0,
+              "yoffset": 12,
+              "type": "esriPMS",
+              "url": "http://static.arcgis.com/images/Symbols/Basic/BlueStickpin.png",
+              "imageData": "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",
+              "contentType": "image/png",
+              "width": 22.5,
+              "height": 22.5
+            },
+            "bufferSymbol": {
+              "color": [
+                246,
+                91,
+                60,
+                0
+              ],
+              "outline": {
+                "color": [
+                  246,
+                  91,
+                  60,
+                  255
+                ],
+                "width": 1.5,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              },
+              "type": "esriSFS",
+              "style": "esriSFSSolid"
+            }
+          },
+          "maxResultCount": 10,
+          "searchSourceSettings": {
+            "allPlaceholder": "Click your desired location on the map",
+            "showInfoWindowOnSelect": true,
+            "sources": [
+              {
+                "layerId": "shop_bakery_946",
+                "url": "https://services7.arcgis.com/UGU8at8Hd3cBOdiE/arcgis/rest/services/shop_bakery/FeatureServer/0",
+                "name": "Bakeries",
+                "placeholder": "",
+                "searchFields": [
+                  "name"
+                ],
+                "displayField": "name",
+                "exactMatch": false,
+                "searchInCurrentMapExtent": false,
+                "zoomScale": 50000,
+                "maxSuggestions": 5,
+                "maxResults": 10,
+                "type": "query"
+              },
+              {
+                "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+                "name": "Esri World Geocoder",
+                "singleLineFieldName": "SingleLine",
+                "placeholder": "Esri World Geocoder",
+                "countryCode": "",
+                "zoomScale": 50000,
+                "maxSuggestions": 6,
+                "maxResults": 6,
+                "searchInCurrentMapExtent": false,
+                "enableLocalSearch": true,
+                "localSearchMinScale": 300000,
+                "localSearchDistance": 50000,
+                "type": "locator"
+              }
+            ]
+          }
+        },
+        "index": 5,
+        "id": "widgets_NearMe_Widget_26"
+      },
+      {
+        "name": "Directions",
+        "label": "Find Directions to your favourite Sweet Treat Shop",
+        "version": "2.4",
+        "uri": "widgets/Directions/Widget",
+        "config": {
+          "routeTaskUrl": "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World",
+          "travelModesUrl": "",
+          "trafficLayerUrl": "",
+          "routeOptions": {
+            "directionsLanguage": "en-us",
+            "directionsLengthUnits": "esriKilometers",
+            "directionsOutputType": "standard",
+            "impedanceAttribute": ""
+          },
+          "geocoderOptions": {
+            "autoComplete": true,
+            "maxLocations": 6,
+            "minCharacters": 3,
+            "searchDelay": 350,
+            "arcgisGeocoder": false,
+            "geocoders": [
+              {
+                "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+                "placeholder": "Find address or place"
+              }
+            ]
+          },
+          "defaultLocations": [
+            "",
+            ""
+          ]
+        },
+        "index": 7,
+        "id": "widgets_Directions_Widget_27"
+      }
+    ],
+    "groups": []
+  },
+  "loadingPage": {
+    "backgroundColor": "#508dca",
+    "backgroundImage": {
+      "visible": false
+    },
+    "loadingGif": {
+      "visible": true,
+      "uri": "configs/loading/images/predefined_loading_1.gif",
+      "width": 58,
+      "height": 29
+    }
+  },
+  "wabVersion": "2.4",
+  "isWebTier": false,
+  "httpProxy": {
+    "useProxy": true,
+    "alwaysUseProxy": false,
+    "url": "",
+    "rules": []
+  }
+}
